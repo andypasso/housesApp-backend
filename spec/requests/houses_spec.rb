@@ -2,13 +2,13 @@
 require 'rails_helper'
 
 RSpec.describe 'houses API', type: :request do
-  # initialize test data 
+  # initialize test data
   # add houses owner
   let(:user) { create(:user) }
   let!(:houses) { create_list(:house, 10, description: 'bigHouse') }
   let(:house_id) { houses.first.id }
-    # authorize request
-    let(:headers) { valid_headers }
+  # authorize request
+  let(:headers) { valid_headers }
 
   # Test suite for GET /houses
   describe 'GET houses' do
@@ -74,7 +74,6 @@ RSpec.describe 'houses API', type: :request do
     end
 
     context 'when the request is invalid' do
-
       let(:invalid_attributes) { { title: nil }.to_json }
       before { post '/houses', params: invalid_attributes, headers: headers }
 
