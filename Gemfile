@@ -4,12 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 group :development, :test do
   gem 'hirb'
-<<<<<<< HEAD
-  gem 'rspec-rails', '~> 3.5'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.4'
-=======
->>>>>>> a36b34ca27b43165db403d093d426c12f3cfebda
 end
 group :test do
   gem 'database_cleaner'
