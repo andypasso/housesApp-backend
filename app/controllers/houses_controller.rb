@@ -1,5 +1,6 @@
 class HousesController < ApplicationController
     before_action :set_house, only: [:show, :update, :destroy]
+    before_action :is_admin, only: [:create, :destroy]
 
     # GET /houses
     def index
@@ -9,7 +10,7 @@ class HousesController < ApplicationController
   
     # POST /houses
     def create
-      @house = current_user.houses.create!(house_params)
+      @house = House.create!(house_params)
       json_response(@house, :created)
     end
   

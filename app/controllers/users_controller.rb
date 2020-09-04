@@ -21,4 +21,5 @@ class UsersController < ApplicationController
         :admin
       )
     end
+
   end
