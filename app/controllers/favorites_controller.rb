@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+  
   # POST /favorites
   def create
     @favorite = current_user.favorites.build(house_id: params_id[:id]) unless current_user.favorite?(params_id[:id])
