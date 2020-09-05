@@ -40,7 +40,7 @@ Check the [API documentation](https://documenter.getpostman.com/view/11604206/TV
 ## Authors
   👤 Andres Rodriguez
 
-Github: @andynarf(https://github.com/andynarf)
+Github: [@andynarf](https://github.com/andynarf)
 
 ## 🤝 Contributing
 Contributions, issues and feature requests are welcome!
@@ -49,7 +49,7 @@ Show your support
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-@cyrus(https://github.com/Cyrus-Kiprop) helped me fix some errors while delpying to Heroku
+[@cyrus](https://github.com/Cyrus-Kiprop) helped me fix some errors while delpying to Heroku
 
 ## 📝 License
 This project is MIT licensed.
