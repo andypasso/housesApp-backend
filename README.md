@@ -30,7 +30,7 @@ You can now start the server by running `rails s`
 
 Check the ERD (Entity Relationship Design) here:
 
-![ERD](https://ibb.co/nkYCvMv)
+![ERD]https://i.ibb.co/SvMr8w8/Screen-Shot-2020-09-05-at-19-15-34.png)
 
 ## API documentation 
 
