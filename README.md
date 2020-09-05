@@ -34,7 +34,7 @@ Check the ERD (Entity Relationship Design) here:
 
 ## API documentation 
 
-Check the [API documentation]
+Check the [API documentation](https://documenter.getpostman.com/view/11604206/TVCh1TPq#782e5967-75fc-4292-8641-c34f7b863c04)
 
 
 ## Authors
