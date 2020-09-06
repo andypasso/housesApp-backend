@@ -1,0 +1,28 @@
+{
+  "name": "houses-api",
+  "version": "1.0.0",
+  "description": "API service to view/select houses using Ruby on Rails.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andynarf/housesApp-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andynarf/housesApp-backend/issues"
+  },
+  "homepage": "https://github.com/andynarf/housesApp-backend#readme",
+  "devDependencies": {
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.17.2"
+  }
+}
