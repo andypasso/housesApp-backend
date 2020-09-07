@@ -5,6 +5,7 @@ RSpec.describe 'houses API', type: :request do
   # initialize test data
   # add houses owner
   let(:user) { create(:user) }
+  let (:admin) { create(:user, admin: true)}
   let!(:houses) { create_list(:house, 10, description: 'bigHouse') }
   let(:house_id) { houses.first.id }
   # authorize request
@@ -62,7 +63,7 @@ RSpec.describe 'houses API', type: :request do
       { title: 'Learn Elm', description: 'smallHouse' }.to_json
     end
     context 'when the request is valid' do
-      before { post '/houses', params: valid_attributes, headers: headers }
+      before { post '/houses', params: valid_attributes, headers: valid_headers(admin.id)}
 
       it 'creates a house' do
         expect(json['title']).to eq('Learn Elm')
@@ -75,7 +76,7 @@ RSpec.describe 'houses API', type: :request do
 
     context 'when the request is invalid' do
       let(:invalid_attributes) { { title: nil }.to_json }
-      before { post '/houses', params: invalid_attributes, headers: headers }
+      before { post '/houses', params: invalid_attributes, headers: valid_headers(admin.id) }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -93,7 +94,7 @@ RSpec.describe 'houses API', type: :request do
     let(:valid_attributes) { { title: 'Shopping' }.to_json }
 
     context 'when the record exists' do
-      before { put "/houses/#{house_id}", params: valid_attributes, headers: headers }
+      before { put "/houses/#{house_id}", params: valid_attributes, headers: valid_headers(admin.id) }
 
       it 'updates the record' do
         expect(response.body).to be_empty
@@ -107,7 +108,7 @@ RSpec.describe 'houses API', type: :request do
 
   # Test suite for DELETE /houses/:id
   describe 'DELETE /houses/:id' do
-    before { delete "/houses/#{house_id}", params: {}, headers: headers }
+    before { delete "/houses/#{house_id}", params: {}, headers: valid_headers(admin.id) }
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)
