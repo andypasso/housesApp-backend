@@ -5,7 +5,7 @@ RSpec.describe 'houses API', type: :request do
   # initialize test data
   # add houses owner
   let(:user) { create(:user) }
-  let (:admin) { create(:user, admin: true)}
+  let(:admin) { create(:user, admin: true) }
   let!(:houses) { create_list(:house, 10, description: 'bigHouse') }
   let(:house_id) { houses.first.id }
   # authorize request
@@ -63,7 +63,7 @@ RSpec.describe 'houses API', type: :request do
       { title: 'Learn Elm', description: 'smallHouse' }.to_json
     end
     context 'when the request is valid' do
-      before { post '/houses', params: valid_attributes, headers: valid_headers(admin.id)}
+      before { post '/houses', params: valid_attributes, headers: valid_headers(admin.id) }
 
       it 'creates a house' do
         expect(json['title']).to eq('Learn Elm')
